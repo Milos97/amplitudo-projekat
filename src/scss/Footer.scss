@@ -1,0 +1,119 @@
+.footer-main-div {
+    background-color: #fff;
+    color: #8a92a3;
+    font-size: 13px;
+    line-height: 18px;
+
+    width: 100%;
+    
+
+    .footer-links-div {
+        max-width: 1440px;
+        margin: 40px auto 30px;
+    }
+
+    .footer-row {
+        max-width: 1440px;
+        margin-right: auto;
+        margin-left: auto;
+        
+        .links-list {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 110px;
+            li {
+                flex: 25%;
+                flex-grow: 0;
+                list-style: none;
+                a {
+                    color: inherit;
+                }
+            }
+        }
+    }
+
+    .f-row-2 {
+        padding-left: 16px;
+        padding-right: 20px;
+        display: flex;
+        margin: 16px auto;
+
+        .f-col-1 {
+            max-width: 50%;
+            height: 24px;
+            p {
+                color: #505763;
+                font-size: 15px;
+                padding-right: 48px;
+                line-height: 24px;
+            }
+        }
+
+        .f-col-2 {
+            display: inline-flex;
+            align-items: baseline;
+            height: 24px;
+
+            img {
+                margin-right: 32px;
+                width: auto;
+                height: 24px;
+                border: 0;
+                vertical-align: middle;
+                max-width: 100%;
+            }
+        }
+    }
+
+    .footer-bottom {
+        max-width: 1440px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 30px auto;
+        color: #8a92a3;
+
+        .row {
+            margin-left: -15px;
+            margin-right: -15px;
+
+            ul {
+
+                li {
+                    display: inline-block;
+                    padding: 6px;
+                    
+                    a {
+                        color: inherit;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.a-blue-dark {
+    color: #007791;
+    background-color: transparent;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.a-blue-dark:hover, .a-blue-dark:focus {
+    color: #003845;
+    text-decoration: none;
+}
+
+li {
+    color: inherit;
+    list-style: none;
+}
+
+.text-right {
+    text-align: right;
+}
+
+hr {
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+}

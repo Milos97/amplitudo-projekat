@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "Components/*": ["./src/Componetns/*"],
+      "Reducers/*": ["./src/Reducers/*"],
+      "Actions/*": ["./src/Actions/*"],
+      "Helpers": ["./src/Helpers"]
+    }
+  }
+}

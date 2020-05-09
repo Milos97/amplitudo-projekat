@@ -1,0 +1,99 @@
+.form-input {
+  border-radius: 5px;
+  color: #29303b;
+  font-size: 18px;
+  height: auto;
+  padding: 11px 45px 12px 40px;
+  display: block;
+  width: 100%;
+  line-height: 1.43;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #8a92a3;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: border-color ease-in-out .08s,-webkit-box-shadow ease-in-out .08s;
+  transition: border-color ease-in-out .08s,-webkit-box-shadow ease-in-out .08s;
+  transition: border-color ease-in-out .08s,box-shadow ease-in-out .08s;
+  transition: border-color ease-in-out .08s,box-shadow ease-in-out .08s,-webkit-box-shadow ease-in-out .08s;
+}
+
+.MuiButton-label {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  color: #02b3e4;
+  min-width: 68px;
+}
+
+.MuiTypography-h6 {
+  font-weight: 700 !important;
+  font-size: 15px !important;
+}
+
+.input-parent-div {
+  position: relative;
+  width: 332px;
+  margin: 0 auto;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.input-parent-div input {
+  width: 332px;
+}
+
+.input-parent-div .input-parent-a {
+  color: #007791;
+}
+
+.input-parent-div p {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.input-ikonica {
+  color: #cacbcc;
+  font-size: 16px;
+  left: 12px;
+  line-height: 1;
+  margin-top: 16px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 24px;
+  z-index: 2;
+}
+
+.new-btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 11px 12px;
+  font-size: 15px;
+  line-height: 1.35135;
+  border-radius: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.new-btn-primary {
+  color: #fff;
+  background-color: #ec5252;
+  border: 1px solid transparent;
+}
+
+.new-btn-primary:hover {
+  background-color: #992337;
+  border-color: transparent;
+}
+/*# sourceMappingURL=LogIn.css.map */
