@@ -80,7 +80,7 @@ class About extends React.Component {
                         <p>Two Horizon Centre, Golf Course Road, DLF <br/>Phase 5, Sector 43, Gurgaon, Haryana, India - <br/>122002</p>
                     </li>
                 </ul> 
-                <p className="contact-us-p">For partnership and business development inquiries, please contact us at <a href="mailto:bizdev@udemy.com">bizdev@udemy.com</a></p>
+                <p className="contact-us-p">For partnership and business development inquiries, please contact us at <a href="mailto:business@youlearn.com">business@youlearn.com</a></p>
             </div>
           <div className="offices-row"></div>
         </div>

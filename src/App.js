@@ -5,6 +5,7 @@ import Footer from "Components/Footer/Footer";
 import Home from "Page/Home/Home";
 import Faq from "Page/Faq/Faq";
 import About from "Page/About/About";
+import Courses from "Page/Courses/Courses";
 
 
 class App extends React.Component {
@@ -24,6 +25,7 @@ class App extends React.Component {
               <Route path="/" exact component={Header, Home} />
               <Route path="/faq" exact component={Faq} />
               <Route path="/about" exact component={About} />
+              <Route path="/courses" exact component={Courses} />
             </Switch>
         <Footer></Footer>
       </div>

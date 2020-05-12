@@ -1,0 +1,30 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "title": "Nesto",
+      "body": "ensto",
+      "img": "src/img/Happy-Children.png",
+      "author": {
+        "name": "Milica Markovic",
+        "avatar": "src/img/Happy-Children.png"
+      },
+      "date": "30.03.2020",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

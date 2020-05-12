@@ -1,0 +1,24 @@
+@media only screen and (max-width: 1440px) {
+    .footer-main-div > .f-row-2 {
+        display: block;
+
+        .f-col-1, .f-col-2 {
+            width: 100%;
+            max-width: 100%;
+            display: block;
+            height: auto;
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+    }
+
+    
+}
+
+@media only screen and (max-width: 1366px) {
+
+    .faq-wrapper-div > .faq-main-div > .faq-sidebar-div {
+        width: 40%;
+    }
+}

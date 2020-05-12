@@ -93,7 +93,7 @@ export default function LogIn() {
       </Button>
       <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-          <p style={{marginLeft: "8px"}}>Log In to Your Udemy Account!</p>
+          <p style={{marginLeft: "8px"}}>Log In to Your YouLearn Account!</p>
         </DialogTitle>
         <DialogContent dividers>
           <Typography gutterBottom>

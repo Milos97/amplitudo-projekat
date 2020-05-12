@@ -8,12 +8,12 @@ class Faq extends React.Component {
   render() {
     return (
       <div className="faq-wrapper-div">
-        <h1 className="faq-heading">Udemy FAQ</h1>
+        <h1 className="faq-heading">YouLearn FAQ</h1>
         <hr />
         <div className="faq-main-div">
           <div className="faq-text-div">
             <p>
-              Udemy's mission is to improve lives through learning. Our global
+              YouLearn's mission is to improve lives through learning. Our global
               marketplace features an extensive, multi-language library, which
               includes over 150,000 courses taught by expert instructors. You
               can take courses across a wide range of categories, some of which
@@ -25,12 +25,12 @@ class Faq extends React.Component {
               <br />
               <br />
               Below are answers to some of the frequently asked questions we
-              receive about Udemy.
+              receive about YouLearn.
             </p>
-            <p className="bold-p">What do Udemy courses include?</p>
+            <p className="bold-p">What do YouLearn courses include?</p>
             <p>
-              Each Udemy course is created, owned and managed by the
-              instructor(s). The foundation of each Udemy course are its
+              Each YouLearn course is created, owned and managed by the
+              instructor(s). The foundation of each YouLearn course are its
               lectures, which can include videos, slides, text and additional
               resources the instructor has uploaded. In addition, instructors
               can add quizzes, practice tests, assignments and coding exercises,
@@ -41,44 +41,44 @@ class Faq extends React.Component {
               <br />For tips
               on how to search our marketplace and find courses you may be
               interested in taking, please read How to Search for Courses on the
-              Udemy Marketplace.
+              YouLearn Marketplace.
             </p>
-            <p className="bold-p">How do I take a Udemy course?</p>
+            <p className="bold-p">How do I take a YouLearn course?</p>
             <p>
-              Udemy courses are entirely on-demand, which means that you can
+              YouLearn courses are entirely on-demand, which means that you can
               enroll in the courses that interest you and learn at your own
               pace. You can begin the course whenever you like, and there are no
               deadlines to complete it. <br />
-              <br />Udemy courses can be accessed from
+              <br />YouLearn courses can be accessed from
               several different devices and platforms, including a desktop,
               laptop, and our Android or iOS mobile app. Detailed information on
-              Udemy’s platforms and features can be reviewed{" "}
+              YouLearn’s platforms and features can be reviewed{" "}
               <a href="#">here</a>. <br />
               <br />After you enroll in a course, you can access
               it by clicking on the course link you will receive in your
-              confirmation email, provided you’re logged into your Udemy
+              confirmation email, provided you’re logged into your YouLearn
               account. You can also begin the course by logging in and
               navigating to your My Courses page. <br />
               <br />For steps on how to log into
-              your Udemy account, please click <a href="#">here</a>.
+              your YouLearn account, please click <a href="#">here</a>.
             </p>
 
             <p className="bold-p">
-              How long do I have to complete a Udemy course?
+              How long do I have to complete a YouLearn course?
             </p>
             <p>
               As noted above, there are no deadlines to begin or complete the
               course. Even after you complete the course, you will continue to
               have access to it, provided that your account’s in good standing,
-              and Udemy continues to have a license to the course. To learn more
+              and YouLearn continues to have a license to the course. To learn more
               about our Lifetime Access policy, please click{" "}
               <a href="#">here</a>.
             </p>
-            <p className="bold-p">Is Udemy an accredited institution?</p>
+            <p className="bold-p">Is YouLearn an accredited institution?</p>
             <p>
-              While Udemy is not an accredited institution, we offer
+              While YouLearn is not an accredited institution, we offer
               skills-based courses taught by experts in their field, and every
-              approved, paid course features a Udemy certificate of completion.
+              approved, paid course features a YouLearn certificate of completion.
               Certificates can be saved as a .pdf or .jpg file so that you can
               easily share your accomplishment.
             </p>
@@ -104,7 +104,7 @@ class Faq extends React.Component {
                 <p><a href="#">Lifetime Access</a></p>
                 <p><a href="#">Certificate of Completion</a></p>
                 <p><a href="#">Refund a Course</a></p>
-                <p><a href="#">Payment Methods on Udemy</a></p>
+                <p><a href="#">Payment Methods on YouLearn</a></p>
                 <p className="last-child-p"><a href="#">What do the Icons under the Lectures Mean?</a></p>
 
                 <h3>Student Topics</h3>

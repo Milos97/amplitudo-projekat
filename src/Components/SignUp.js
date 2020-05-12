@@ -108,7 +108,7 @@ export default function SignUp() {
       </Button>
       <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-          <p style={{marginLeft: "8px"}}>Log In to Your Udemy Account!</p>
+          <p style={{marginLeft: "8px"}}>Sign Up and Start Learning!</p>
         </DialogTitle>
         <DialogContent dividers>
             <Typography gutterBottom>
@@ -146,7 +146,7 @@ export default function SignUp() {
                     marginBottom: "14px",
                   }} 
                  for="subscribe_to_mails">
-                  Yes! I want to get the most out of Udemy by receiving emails with exclusive deals, 
+                  Yes! I want to get the most out of YouLearn by receiving emails with exclusive deals, 
                   personal recommendations and learning tips!
                 </label>
                 <input className="input-parent-a" type="submit" name="submit" value="Sign Up" className="new-btn new-btn-primary" onClick={handleClose}/>

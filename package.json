@@ -1,13 +1,14 @@
 {
   "name": "aplitudaapp",
   "version": "1.0.0",
-  "description": "Aplikacija za predavanje reacta",
+  "description": "Academy course website",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "json:server": "json-server --watch db.json"
   },
-  "author": "Stefan",
+  "author": "Milos",
   "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
