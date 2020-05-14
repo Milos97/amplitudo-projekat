@@ -1,10 +1,10 @@
 import React from 'react';
 
 const CourseItem = ({course}) => {
-    const {title, img, author, rating, reviewsCount, price, discount} = course;
+    const {title, img, author, rating, reviewsCount, price, discount, id} = course;
     return (
         <li className="course-div">
-            <a href="#">
+            <a href={`courses/${id}`}>
                 <img className="course-img" src={img} alt="slika" />
                 <div className="course-content">
                     <h3 className="course-title">{title}</h3>

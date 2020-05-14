@@ -109,7 +109,7 @@ class Faq extends React.Component {
 
                 <h3>Student Topics</h3>
                 
-                <a href="#" className="faq-button">Contact Us</a>
+                <a href="mailto:business@youlearn.com" className="faq-button">Contact Us</a>
             </div>
           </div>
         </div>

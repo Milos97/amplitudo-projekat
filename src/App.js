@@ -6,6 +6,9 @@ import Home from "Page/Home/Home";
 import Faq from "Page/Faq/Faq";
 import About from "Page/About/About";
 import Courses from "Page/Courses/Courses";
+import Admin from "Page/Admin/Admin";
+import Course from "Components/Course";
+import SingleCourse from "./Components/SingleCourse";
 
 
 class App extends React.Component {
@@ -20,14 +23,16 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header></Header>
-        {/* <Home></Home> */}
         <Switch>
               <Route path="/" exact component={Header, Home} />
               <Route path="/faq" exact component={Faq} />
               <Route path="/about" exact component={About} />
               <Route path="/courses" exact component={Courses} />
-            </Switch>
+              {/* <Route path="/courses/:id" exact render={props => <SingleCourse {...props} />} /> */}
+              <Route path="/admin" exact component={Admin} />
+        </Switch>
         <Footer></Footer>
+        
       </div>
     );
   }

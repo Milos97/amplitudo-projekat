@@ -1,4 +1,4 @@
-import {FETCH_COURSES, MAKE_COURSE} from "Actions/coursesAction";
+import {FETCH_COURSES, FETCH_COURSE, MAKE_COURSE} from "Actions/coursesAction";
 
 const initialState = {
     courses: [],
@@ -12,6 +12,11 @@ export default function (state = initialState, action) {
                 ...state,
                 courses: action.payload
             };
+        // case FETCH_COURSE:
+        //     return{
+        //         ...state,
+        //         course: action.payload
+        //     };
         case MAKE_COURSE:
             return {
                 ...state,

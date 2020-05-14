@@ -41,6 +41,22 @@ const Courses = (props) => {
                 : courses.map(course => <CourseItem course={course} key={course.id}/>)
             }
             </ul>
+            <p className="courses-p">Top courses in Personal Development</p>
+            <ul className="courses-ul">
+            {
+                courses.length === 0
+                ? <div className="no-courses">No Courses yet</div>
+                : courses.map(course => <CourseItem course={course} key={course.id}/>)
+            }
+            </ul>
+            <p className="courses-p">Top courses in Development</p>
+            <ul className="courses-ul">
+            {
+                courses.length === 0
+                ? <div className="no-courses">No Courses yet</div>
+                : courses.map(course => <CourseItem course={course} key={course.id}/>)
+            }
+            </ul>
         </div>
     );
 };

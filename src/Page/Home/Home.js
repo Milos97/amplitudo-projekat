@@ -23,10 +23,10 @@ class Home extends React.Component {
           <div className="home-banner-div">
             <h1 className="banner-h">Bootcamp Quality at 1/10 of the Cost</h1>
             <p className="banner-p">
-              Udemy is the world's fastest, most efficient way to master the
+              YouLearn is the world's fastest, most efficient way to master the
               skills tech companies want. 100% oniline, part-time & self-paced.
             </p>
-            <a className="button blue-btn" href="#">
+            <a className="button blue-btn" href="courses">
               LEARN MORE
             </a>
             <p className="banner-p">
@@ -43,12 +43,12 @@ class Home extends React.Component {
           </div>
           {/*  TABLE DIV  */}
           <div className="banner-table-div">
-            <h2 className="table-header">Only at Udemy: <span>Job-Ready Skills</span></h2>
+            <h2 className="table-header">Only at YouLearn: <span>Job-Ready Skills</span></h2>
             <table className="tg">
               <thead>
               <tr>
                 <th className="tg-cly1 table-p first"></th>
-                <th className="tg-cly1 table-blue">UDEMY</th>
+                <th className="tg-cly1 table-blue">YouLearn</th>
                 <th className="tg-cly1 table-grey">OTHERS</th>
               </tr>
               </thead>
@@ -92,13 +92,13 @@ class Home extends React.Component {
         <Categories></Categories>
 
 
-        {/* INSTRUCTOR AND UDEMY FOR BUSINESS SECTIONS */}
+        {/* INSTRUCTOR AND YouLearn FOR BUSINESS SECTIONS */}
         <div className="instructor-wrapper component-margin"> 
           <div className="instructor-div"> 
             <img src={girl} alt="Girl" />
             <div className="instructor-text">
               <h2 className="h2-style">Become an instructor</h2>
-              <p className="p-style">Top instructors from around the world teach millions of students on Udemy. 
+              <p className="p-style">Top instructors from around the world teach millions of students on YouLearn. 
               We provide the tools and skills to teach what you love.</p>
               <a href="#" className="btn-m btn-primary-m btn-large-m">Start teaching today</a>
             </div>
@@ -108,9 +108,9 @@ class Home extends React.Component {
         <div className="instructor-wrapper component-margin border-top-1"> 
           <div className="instructor-div business-div"> 
             <div className="instructor-text">
-              <h2 className="h2-style">Udemy for Business</h2>
-              <p className="p-style">Get unlimited access to 4,000+ of Udemy’s top courses for your team.</p>
-              <a href="#" className="btn-m btn-primary-m btn-large-m">Get Udemy for Business</a>
+              <h2 className="h2-style">YouLearn for Business</h2>
+              <p className="p-style">Get unlimited access to 4,000+ of YouLearn’s top courses for your team.</p>
+              <a href="#" className="btn-m btn-primary-m btn-large-m">Get YouLearn for Business</a>
             </div>
             <img src={guy} alt="Guy" />
           </div>
@@ -119,11 +119,11 @@ class Home extends React.Component {
         {/*  TRANSFORM SECTION */}
         <div className="transform-div border-top-1 component-margin">
           <iframe className="yt-vid" width="580" height="326.25"
-              src="https://www.youtube.com/embed/QFIhEmOd6No">
+              src="https://www.youtube.com/embed/QFIhEmOd6No?">
           </iframe>
           <div className="transform-text">
             <h2 className="h2-style">Transform your life through education</h2>
-            <p className="p-style">Mohamad Alaloush launched a new career in software development by taking courses on Udemy. 
+            <p className="p-style">Mohamad Alaloush launched a new career in software development by taking courses on YouLearn. 
               What will you be able to do?</p>
           </div>
         </div>

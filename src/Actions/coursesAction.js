@@ -1,4 +1,3 @@
-
 import axios from 'axios';
 
 axios.defaults.baseURL = "http://localhost:3000";
@@ -6,8 +5,11 @@ axios.defaults.baseURL = "http://localhost:3000";
 export const FETCH_COURSES = 'FETCH_COURSES';
 export const MAKE_COURSE = 'MAKE_COURSE';
 
+// let id = "id=1";
+let id = ""; 
+
 export const fetchCourses = () => dispatch => {
-    axios.get('/courses')
+    axios.get(`/design?${id}`) 
         .then(res => {
             dispatch({
             type: FETCH_COURSES,
@@ -16,8 +18,18 @@ export const fetchCourses = () => dispatch => {
         });
 };
 
+// export const fetchCourse = () => dispatch => {
+//     axios.get(`/design?${id}`)
+//         .then(res => {
+//             dispatch({
+//             type: FETCH_COURSE,
+//             payload: res.data
+//             })
+//         });
+// };
+
 export const makeCourse = (payload) => dispatch => {
-    axios.post('/courses', payload)
+    axios.post('/design', payload)
         .then(res => {
             dispatch({
                 type:MAKE_COURSE,
