@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, useParams } from "react-router-dom";
 import Header from "Components/Header/Header";
 import Footer from "Components/Footer/Footer";
 import Home from "Page/Home/Home";
@@ -7,9 +7,15 @@ import Faq from "Page/Faq/Faq";
 import About from "Page/About/About";
 import Courses from "Page/Courses/Courses";
 import Admin from "Page/Admin/Admin";
-import Course from "Components/Course";
-import SingleCourse from "./Components/SingleCourse";
 
+
+import {connect} from "react-redux";
+import CourseItem from "Components/Course";
+import SingleCourse from "./Components/SingleCourse";
+import axios from 'axios';
+import {fetchCourses, makeCourse, fetchCourse} from "Actions/coursesAction";
+
+axios.defaults.baseURL = "http://localhost:3000";
 
 class App extends React.Component {
   constructor(props) {
@@ -18,6 +24,9 @@ class App extends React.Component {
       
     };
   }
+
+ 
+
   render() {
     
     return (
@@ -28,7 +37,7 @@ class App extends React.Component {
               <Route path="/faq" exact component={Faq} />
               <Route path="/about" exact component={About} />
               <Route path="/courses" exact component={Courses} />
-              {/* <Route path="/courses/:id" exact render={props => <SingleCourse {...props} />} /> */}
+              <Route path="/courses/:courseid" exact children={<Child/>} />
               <Route path="/admin" exact component={Admin} />
         </Switch>
         <Footer></Footer>
@@ -36,6 +45,20 @@ class App extends React.Component {
       </div>
     );
   }
+}
+
+function Child() {
+  
+  let { courseid } = useParams();
+
+  return (
+    <div style={{margin: "15px"}}>
+      <h1>ID: {courseid}</h1>
+      {/* Odje treba da ide Course komponenta */}
+    </div>
+  );  
+
+  
 }
 
 export default App;

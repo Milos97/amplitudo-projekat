@@ -12,11 +12,11 @@ export default function (state = initialState, action) {
                 ...state,
                 courses: action.payload
             };
-        // case FETCH_COURSE:
-        //     return{
-        //         ...state,
-        //         course: action.payload
-        //     };
+        case FETCH_COURSE:
+            return{
+                ...state,
+                courses: action.payload
+            };
         case MAKE_COURSE:
             return {
                 ...state,
