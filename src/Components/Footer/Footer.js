@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../img/udemy-logo.svg';
+import logo from '../../img/logo.png';
 // import "../../scss/Footer.scss";
 
 class Footer extends React.Component {

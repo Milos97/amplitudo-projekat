@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import CourseItem from '../../Components/Course';
-import {fetchCourses, makeCourse} from "Actions/coursesAction";
+import {fetchCourses, makeCourse, fetchCourse} from "Actions/coursesAction";
 import {connect} from "react-redux";
 
 
@@ -15,7 +15,7 @@ const Courses = (props) => {
         <div className="courses-wrapper-div">
             <div>
                 <p className="courses-p">Most popular topics</p>
-                <div>Placehodler div</div>
+                <div>Placeholder div</div>
             </div>
             <p className="courses-p">Top courses in Design</p>
             <ul className="courses-ul">
@@ -66,4 +66,4 @@ const mapStateToProps = state => ({
     courses: state.kursevi.courses.reverse(),
 });
 
-export default connect(mapStateToProps, { fetchCourses, makeCourse })(Courses);
+export default connect(mapStateToProps, { fetchCourses, makeCourse, fetchCourse })(Courses);

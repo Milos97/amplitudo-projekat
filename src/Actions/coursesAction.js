@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 axios.defaults.baseURL = "http://localhost:3000";
 
 export const FETCH_COURSES = 'FETCH_COURSES';
@@ -20,7 +19,7 @@ export const fetchCourses = () => dispatch => {
 };
 
 export const fetchCourse = () => dispatch => {
-    axios.get(`/design?id=1`)
+    axios.get(`/design?id=${globalVar}`)
         .then(res => {
             dispatch({
             type: FETCH_COURSE,

@@ -11,7 +11,7 @@ const CourseItem = ({course}) => {
                     <h3 className="course-title">{title}</h3>
                     <p className="course-author">{author}</p>
                     <p className="course-rating">Rating: {rating}<span>({reviewsCount})</span></p>
-                    <p className="course-price"><span>${price}</span> ${discount}</p>
+                    <p className="course-price"><span>{price}</span> {discount}</p>
                 </div>
             </Link>
         </li>

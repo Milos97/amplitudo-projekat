@@ -51,11 +51,9 @@ function Child() {
   
   let { courseid } = useParams();
 
+  window.globalVar = courseid;
   return (
-    <div style={{margin: "15px"}}>
-      <h1>ID: {courseid}</h1>
-      {/* Odje treba da ide Course komponenta */}
-    </div>
+      <SingleCourse></SingleCourse>
   );  
 
   

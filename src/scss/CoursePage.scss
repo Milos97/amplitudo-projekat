@@ -1,0 +1,109 @@
+.course-page-main {
+    width: 100%;
+}
+
+.course-page-link {
+    font-weight: 700;
+    color: #686f7a;
+    display: block;
+    font-size: 13px;
+    padding: 12px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.course-page-div {
+    background: linear-gradient(#29303B,#29303B,#29303B);
+    color: white;
+    box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1), 0 3px 1px 0 rgba(20, 23, 28, 0.1);
+    border-radius: 4px;
+
+    .course-page-content {
+        font-family: Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+        font-size: 15px;
+        width: 66%;
+        max-width: 700px;
+        padding: 30px 0 0 30px;
+    
+        .course-page-title {
+            font-size: 36px;
+            line-height: 41px;
+            font-weight: 700;
+            color: inherit;
+            margin-top: 21px;
+            margin-bottom: 10.5px;
+        }
+    
+        .course-page-desc {
+            font-size: 21px;
+            line-height: 27px;
+        }
+    
+    }
+
+    .course-sidebar-main {
+        width:  34%;
+
+        .course-sidebar-div {
+            width: 360px;
+            margin-top: 18px;
+            background-color: #fff;
+            box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+            border-radius: 4px;
+            color: #505763;
+            padding: 3px;
+            margin-bottom: 18px;
+            .course-sidebar-img {
+                width: 100%;
+            }
+    
+            .course-sidebar-content {
+                padding: 15px 30px;
+    
+                .course-sidebar-price {
+    
+                    .span-price, .span-discount {
+                        position: relative;
+                        top: -9px;
+                        font-weight: 400;
+                        font-size: 18px;
+                        color: #8a92a3;
+                        vertical-align: middle;
+                        margin-left: 10px;
+                    }
+        
+                    .span-price {
+                        text-decoration: line-through;
+                    }
+                }
+    
+                .course-sidebar-time {
+                    color: #992337;
+                    font-size: 14px;
+                }
+    
+                .money-back {
+                    display: block;
+                    font-size: 12px;
+                    font-weight: 400;
+                    margin-bottom: 10px;
+                    margin-top: 10px;
+                    text-align: center;
+                }
+
+                .course-includes-p {
+                    font-size: 13px;
+                    padding: 3px;
+                    span {
+                        color: #505763;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+
+
