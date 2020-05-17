@@ -97,27 +97,28 @@ export default function LogIn() {
         </DialogTitle>
         <DialogContent dividers>
           <Typography gutterBottom>
-            <div className="input-parent-div">
-                <MailIcon className="input-ikonica" />
-                <input className="form-input" name="email" required maxLength="64" minLength="7" placeholder="Email" type="email" />
-            </div>
-          </Typography>
-          <Typography gutterBottom>
-            <div className="input-parent-div">
-                <LockIcon className="input-ikonica" />
-                <input className="form-input" name="password" required maxLength="64" minLength="6" placeholder="Password" type="password" />
-            </div>
+            <form>
+              <div className="input-parent-div">
+                  <MailIcon className="input-ikonica" />
+                  <input className="form-input" name="email" required maxLength="64" minLength="7" placeholder="Email" type="email" />
+              </div>
+              <div className="input-parent-div">
+                  <LockIcon className="input-ikonica" />
+                  <input className="form-input" name="password" required maxLength="64" minLength="3" placeholder="Password" type="password" />
+              </div>
+              <div style={{marginTop: "30px"}} className="input-parent-div">
+                <input className="input-parent-a" type="submit" name="submit" value="Log In" className="new-btn new-btn-primary" />
+                <p><span>or</span> <a href="#">Forgot Password</a></p>
+                <p><span>Dont have an account ? </span> <a href="#" onClick={handleClose}>Sign up</a></p>
+              </div>
+            </form>
           </Typography>
           <Typography gutterBottom>
             
           </Typography>
         </DialogContent>
         <DialogActions>
-            <div className="input-parent-div">
-                <input className="input-parent-a" type="submit" name="submit" value="Log In" className="new-btn new-btn-primary" onClick={handleClose}/>
-                <p><span>or</span> <a href="#">Forgot Password</a></p>
-                <p><span>Dont have an account ? </span> <a href="#" onClick={handleClose}>Sign up</a></p>
-            </div>
+            
           {/* <Button autoFocus  color="primary">
             Log In
           </Button> */}

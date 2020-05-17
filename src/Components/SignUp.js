@@ -112,47 +112,46 @@ export default function SignUp() {
         </DialogTitle>
         <DialogContent dividers>
             <Typography gutterBottom>
-            <div className="input-parent-div">
-                <PersonIcon className="input-ikonica" />
-                <input className="form-input" name="fullname" required maxLength="64" minLength="2" placeholder="Full Name" type="text" />
-            </div>
-            </Typography>
-          <Typography gutterBottom>
-            <div className="input-parent-div">
-                <MailIcon className="input-ikonica" />
-                <input className="form-input" name="email" required maxLength="64" minLength="7" placeholder="Email" type="email" />
-            </div>
-          </Typography>
-          <Typography gutterBottom>
-            <div className="input-parent-div">
-                <LockIcon className="input-ikonica" />
-                <input className="form-input" name="password" required maxLength="64" minLength="6" placeholder="Password" type="password" />
-            </div>
+              <form>
+                <div className="input-parent-div">
+                    <PersonIcon className="input-ikonica" />
+                    <input className="form-input" name="fullname" required maxLength="64" minLength="2" placeholder="Full Name" type="text" />
+                </div>
+                <div className="input-parent-div">
+                    <MailIcon className="input-ikonica" />
+                    <input className="form-input" name="email" required maxLength="64" minLength="4" placeholder="Email" type="email" />
+                </div>
+                <div className="input-parent-div">
+                    <LockIcon className="input-ikonica" />
+                    <input className="form-input" name="password" required maxLength="64" minLength="3" placeholder="Password" type="password" />
+                </div>
+                <div className="input-parent-div" style={{marginTop: "30px"}}>
+                    
+                    <input style={{
+                      width: "fit-content",
+                      verticalAlign: "top",
+                      margin: "5px 5px 0 0",
+                    }} 
+                    type="checkbox" name="subscribe_to_mails" />
+                    <label
+                      style={{
+                        width: "92%",
+                        marginBottom: "14px",
+                      }} 
+                    for="subscribe_to_mails">
+                      Yes! I want to get the most out of YouLearn by receiving emails with exclusive deals, 
+                      personal recommendations and learning tips!
+                    </label>
+                    <input className="input-parent-a" type="submit" name="submit" value="Sign Up" className="new-btn new-btn-primary" />
+                    <p className="signup-p">By signing up, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy.</a></p>
+                    <p style={{borderTop:" 1px solid rgba(0, 0, 0, 0.12)", paddingTop:"14px"}}><span>Already have an account ? </span> <a href="#" onClick={handleClose}>Log In</a></p>
+                </div>
+            </form>
           </Typography>
           
         </DialogContent>
         <DialogActions>
-            <div className="input-parent-div">
-                
-                <input style={{
-                  width: "fit-content",
-                  verticalAlign: "top",
-                  margin: "5px 5px 0 0",
-                }} 
-                type="checkbox" name="subscribe_to_mails" />
-                <label
-                  style={{
-                    width: "92%",
-                    marginBottom: "14px",
-                  }} 
-                 for="subscribe_to_mails">
-                  Yes! I want to get the most out of YouLearn by receiving emails with exclusive deals, 
-                  personal recommendations and learning tips!
-                </label>
-                <input className="input-parent-a" type="submit" name="submit" value="Sign Up" className="new-btn new-btn-primary" onClick={handleClose}/>
-                <p className="signup-p">By signing up, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy.</a></p>
-                <p style={{borderTop:" 1px solid rgba(0, 0, 0, 0.12)", paddingTop:"14px"}}><span>Already have an account ? </span> <a href="#" onClick={handleClose}>Log In</a></p>
-            </div>
+            
           {/* <Button autoFocus  color="primary">
             Log In
           </Button> */}

@@ -7,15 +7,10 @@ import Faq from "Page/Faq/Faq";
 import About from "Page/About/About";
 import Courses from "Page/Courses/Courses";
 import Admin from "Page/Admin/Admin";
-
-
-import {connect} from "react-redux";
-import CourseItem from "Components/Course";
 import SingleCourse from "./Components/SingleCourse";
-import axios from 'axios';
-import {fetchCourses, makeCourse, fetchCourse} from "Actions/coursesAction";
+import LogIn from "./Components/LogIn";
+import SignUp from "./Components/SignUp";
 
-axios.defaults.baseURL = "http://localhost:3000";
 
 class App extends React.Component {
   constructor(props) {
@@ -35,6 +30,8 @@ class App extends React.Component {
         <Switch>
               <Route path="/" exact component={Header, Home} />
               <Route path="/faq" exact component={Faq} />
+              {/* <Route path="/LogIn" exact component={LogIn} />
+              <Route path="/SignUp" exact component={SignUp} /> */}
               <Route path="/about" exact component={About} />
               <Route path="/courses" exact component={Courses} />
               <Route path="/courses/:courseid" exact children={<Child/>} />
