@@ -13,10 +13,10 @@ const Courses = (props) => {
 
     return (
         <div className="courses-wrapper-div">
-            <div>
+            {/* <div>
                 <p className="courses-p">Most popular topics</p>
                 <div>Placeholder div</div>
-            </div>
+            </div> */}
             <p className="courses-p">Top courses in Design</p>
             <ul className="courses-ul">
             {

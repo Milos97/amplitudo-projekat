@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {useContext, useCallback} from 'react';
 import { Link } from "react-router-dom";
+import { withRouter, Redirect } from "react-router";
+import app from '../base';
+import { AuthContext } from "../Auth.js";
 
 const CoursePage = ({course}) => {
     const {title, img, author, rating, reviewsCount, price, discount, id, desc} = course;
     const discountPercentage = Number(((price - discount) / price * 100).toFixed(0)); ;
+    const { currentUser } = useContext(AuthContext);
 
     return (
         <div className="course-page-main">
@@ -16,6 +20,13 @@ const CoursePage = ({course}) => {
                     <p className="course-page-desc">{desc} </p>
                     <p className="course-page-rating">Rating: {rating} {reviewsCount} </p>
                     <p className="course-page-author">Created by {author} </p>
+
+                    
+                    {
+                        currentUser
+                        ? <a style={{marginTop: "30px"}} className="button blue-btn" href="https://we.tl/t-Yr2AAdeuQv" target="_blank">Download Course</a>
+                        : ""
+                    }
                 </div>
                 <div className="course-sidebar-main">
                     <div className="course-sidebar-div">
@@ -26,7 +37,7 @@ const CoursePage = ({course}) => {
                             <p className="course-sidebar-time"><b>8 hours</b> left at this price!</p>
                             <button className="button blue-btn" style={{width: "100%"}} onClick={console.log("clicked")}>Buy now</button>
                             <p className="money-back">30-Day Money-Back Guarantee</p>
-                            <p className="course-includes-p"><span>This course includes</span> <br/>
+                            <p className="course-includes-p"><span>This course includes: </span> <br/>
                                 19.5 hours on-demand video <br/>
                                 1 article <br/>
                                 20 downloadable resources <br/>

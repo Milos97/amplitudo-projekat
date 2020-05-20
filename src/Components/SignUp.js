@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useContext } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -11,6 +11,10 @@ import MailIcon from '@material-ui/icons/Mail';
 import LockIcon from '@material-ui/icons/Lock';
 import Typography from '@material-ui/core/Typography';
 import PersonIcon from '@material-ui/icons/Person';
+
+import app from "../base";
+import { withRouter, Redirect } from "react-router";
+import { AuthContext } from "../Auth.js";
 
 const styles = theme => ({
   root: {
@@ -62,7 +66,7 @@ const buttonStyle = withStyles(theme => ({
   },
 }))(Button);
 
-export default function SignUp() {
+const SignUp = ({ history }) => {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -71,6 +75,25 @@ export default function SignUp() {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const handleSignUp = useCallback(async event => {
+    event.preventDefault();
+    const { email, password } = event.target.elements;
+    try {
+      await app
+        .auth()
+        .createUserWithEmailAndPassword(email.value, password.value);
+      history.push("/");
+    } catch (error) {
+      alert(error);
+    }
+  }, [history]);
+
+  const { currentUser } = useContext(AuthContext);
+
+  if (currentUser) {
+    return <Redirect to={window.location.pathname} />;
+  }
 
   return (
     <div>
@@ -112,7 +135,7 @@ export default function SignUp() {
         </DialogTitle>
         <DialogContent dividers>
             <Typography gutterBottom>
-              <form>
+              <form onSubmit={handleSignUp}>
                 <div className="input-parent-div">
                     <PersonIcon className="input-ikonica" />
                     <input className="form-input" name="fullname" required maxLength="64" minLength="2" placeholder="Full Name" type="text" />
@@ -142,7 +165,8 @@ export default function SignUp() {
                       Yes! I want to get the most out of YouLearn by receiving emails with exclusive deals, 
                       personal recommendations and learning tips!
                     </label>
-                    <input className="input-parent-a" type="submit" name="submit" value="Sign Up" className="new-btn new-btn-primary" />
+                    <input className="input-parent-a" type="submit" name="submit" value="Sign Up" className="new-btn new-btn-primary" 
+                    />
                     <p className="signup-p">By signing up, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy.</a></p>
                     <p style={{borderTop:" 1px solid rgba(0, 0, 0, 0.12)", paddingTop:"14px"}}><span>Already have an account ? </span> <a href="#" onClick={handleClose}>Log In</a></p>
                 </div>
@@ -160,3 +184,5 @@ export default function SignUp() {
     </div>
   );
 }
+
+export default withRouter(SignUp);

@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Route, Switch, useParams } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, useParams } from "react-router-dom";
 import Header from "Components/Header/Header";
 import Footer from "Components/Footer/Footer";
 import Home from "Page/Home/Home";
@@ -10,6 +10,7 @@ import Admin from "Page/Admin/Admin";
 import SingleCourse from "./Components/SingleCourse";
 import LogIn from "./Components/LogIn";
 import SignUp from "./Components/SignUp";
+import { AuthProvider } from "./Auth";
 
 
 class App extends React.Component {
@@ -20,40 +21,46 @@ class App extends React.Component {
     };
   }
 
+  
  
 
   render() {
     
     return (
-      <div className="App">
-        <Header></Header>
-        <Switch>
-              <Route path="/" exact component={Header, Home} />
-              <Route path="/faq" exact component={Faq} />
-              {/* <Route path="/LogIn" exact component={LogIn} />
-              <Route path="/SignUp" exact component={SignUp} /> */}
-              <Route path="/about" exact component={About} />
-              <Route path="/courses" exact component={Courses} />
-              <Route path="/courses/:courseid" exact children={<Child/>} />
-              <Route path="/admin" exact component={Admin} />
-        </Switch>
-        <Footer></Footer>
-        
-      </div>
+      <AuthProvider>
+        <Router>
+          <div className="App">
+            <Header></Header>
+            <Switch>
+                  <Route path="/" exact component={Home} />
+                  <Route path="/faq" exact component={Faq} />
+                  <Route path="/about" exact component={About} />
+                  <Route path="/courses" exact component={Courses} />
+                  <Route path="/courses/:courseid" children={<Child/>} />
+                  <Route path="/admin" exact component={Admin} />
+            </Switch>
+            <Footer></Footer>
+            
+          </div>
+        </Router>
+      </AuthProvider>
     );
   }
 }
 
+window.globalVar = window.location.pathname.slice(-1); // dava id preko url-a 
+
 function Child() {
   
   let { courseid } = useParams();
-
   window.globalVar = courseid;
   return (
       <SingleCourse></SingleCourse>
   );  
+}
 
-  
+function loggedIn() {
+  console.log(test);
 }
 
 export default App;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useContext } from "react";
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -10,6 +10,9 @@ import CloseIcon from '@material-ui/icons/Close';
 import MailIcon from '@material-ui/icons/Mail';
 import LockIcon from '@material-ui/icons/Lock';
 import Typography from '@material-ui/core/Typography';
+import { withRouter, Redirect } from "react-router";
+import app from "../base.js";
+import { AuthContext } from "../Auth.js";
 
 const styles = theme => ({
   root: {
@@ -55,7 +58,7 @@ const DialogActions = withStyles(theme => ({
   },
 }))(MuiDialogActions);
 
-export default function LogIn() {
+const LogIn = ({ history }) => {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -64,6 +67,28 @@ export default function LogIn() {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const handleLogin = useCallback(
+    async event => {
+      event.preventDefault();
+      const { email, password } = event.target.elements;
+      try {
+        await app
+          .auth()
+          .signInWithEmailAndPassword(email.value, password.value);
+        history.push("/");
+      } catch (error) {
+        alert(error);
+      }
+    },
+    [history]
+  );
+
+  const { currentUser } = useContext(AuthContext);
+
+  if (currentUser) {
+    return <Redirect to={window.location.pathname} />;
+  }
 
   return (
     <div>
@@ -97,10 +122,10 @@ export default function LogIn() {
         </DialogTitle>
         <DialogContent dividers>
           <Typography gutterBottom>
-            <form>
+            <form onSubmit={handleLogin}>
               <div className="input-parent-div">
                   <MailIcon className="input-ikonica" />
-                  <input className="form-input" name="email" required maxLength="64" minLength="7" placeholder="Email" type="email" />
+                  <input className="form-input" name="email" required maxLength="64" minLength="4" placeholder="Email" type="email" />
               </div>
               <div className="input-parent-div">
                   <LockIcon className="input-ikonica" />
@@ -127,3 +152,4 @@ export default function LogIn() {
     </div>
   );
 }
+export default withRouter(LogIn);
