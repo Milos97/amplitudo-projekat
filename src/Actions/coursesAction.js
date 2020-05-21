@@ -19,7 +19,7 @@ export const fetchCourses = () => dispatch => {
 };
 
 export const fetchCourse = () => dispatch => {
-    axios.get(`/design?id=${globalVar}`)
+    axios.get(`/design?id=${localStorage.getItem("globalVar")}`)
         .then(res => {
             dispatch({
             type: FETCH_COURSE,

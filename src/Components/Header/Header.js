@@ -31,8 +31,8 @@ const Header = () => {
                 <input placeholder="Search for anything" name="q" autoComplete="off" className="header-search-bar" />
             </div>
             <div className="register-div header-divs">
-                <a className="nav-a" href="about">About</a>
-                <a className="nav-a" href="faq">Faq</a>
+                <a className="nav-a" href="/about">About</a>
+                <a className="nav-a" href="/faq">Faq</a>
                 {/* <a href="#" className="btn-m btn-secondary-m">Log in</a> */}
                 <LogIn style={{padding: "0"}}></LogIn>
                 <SignUp></SignUp>

@@ -3,7 +3,6 @@ import CourseItem from '../../Components/Course';
 import {fetchCourses, makeCourse, fetchCourse} from "Actions/coursesAction";
 import {connect} from "react-redux";
 
-
 const Courses = (props) => {
     const {courses} = props;
 
@@ -11,6 +10,7 @@ const Courses = (props) => {
         props.fetchCourses();
     }, []);
 
+    
     return (
         <div className="courses-wrapper-div">
             {/* <div>
@@ -22,7 +22,7 @@ const Courses = (props) => {
             {
                 courses.length === 0
                 ? <div className="no-courses">No Courses yet</div>
-                : courses.map(course => <CourseItem course={course} key={course.id}/>)
+                : courses.slice(0, 5).map(course => <CourseItem course={course} key={course.id}/>)
             }
             </ul>
             <p className="courses-p">Top courses in Business</p>
@@ -30,7 +30,7 @@ const Courses = (props) => {
             {
                 courses.length === 0
                 ? <div className="no-courses">No Courses yet</div>
-                : courses.map(course => <CourseItem course={course} key={course.id}/>)
+                : courses.slice(0, 5).map(course => <CourseItem course={course} key={course.id}/>)
             }
             </ul>
             <p className="courses-p">Top courses in IT & Software</p>
@@ -38,7 +38,7 @@ const Courses = (props) => {
             {
                 courses.length === 0
                 ? <div className="no-courses">No Courses yet</div>
-                : courses.map(course => <CourseItem course={course} key={course.id}/>)
+                : courses.slice(0, 5).map(course => <CourseItem course={course} key={course.id}/>)
             }
             </ul>
             <p className="courses-p">Top courses in Personal Development</p>
@@ -46,7 +46,7 @@ const Courses = (props) => {
             {
                 courses.length === 0
                 ? <div className="no-courses">No Courses yet</div>
-                : courses.map(course => <CourseItem course={course} key={course.id}/>)
+                : courses.slice(0, 5).map(course => <CourseItem course={course} key={course.id}/>)
             }
             </ul>
             <p className="courses-p">Top courses in Development</p>
@@ -54,7 +54,7 @@ const Courses = (props) => {
             {
                 courses.length === 0
                 ? <div className="no-courses">No Courses yet</div>
-                : courses.map(course => <CourseItem course={course} key={course.id}/>)
+                : courses.slice(0, 5).map(course => <CourseItem course={course} key={course.id}/>)
             }
             </ul>
         </div>

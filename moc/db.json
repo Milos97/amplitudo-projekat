@@ -1,60 +1,59 @@
 {
-    "design": [
-        
-        {
-            "img": "https://img-a.udemycdn.com/course/240x135/1259404_72d4_7.jpg",
-            "title": "The Ultimate Drawing Course - Beginner to Advanced",
-            "desc": "The Ultimate Graphic Design Course Which Covers Photoshop, Illustrator, InDesign,Design Theory, Branding and Logo Design",
-            "author": "Jaysen Batchelor, Quinton Batchelor",
-            "rating": "4.5",
-            "reviewsCount": "10,327",
-            "price": 149.99,
-            "discount": 9.99,
-            "id": 1
-        },
-        {
-            "img": "https://img-a.udemycdn.com/course/240x135/1136678_f12f_2.jpg",
-            "title": "How to Work with a Interior Design Styles Like a pro",
-            "desc": "The Ultimate Graphic Design Course Which Covers Photoshop, Illustrator, InDesign,Design Theory, Branding and Logo Design",
-            "author": "Errika Fogleman",
-            "rating": "4.3",
-            "reviewsCount": "10,327",
-            "price": 199.99,
-            "discount": 9.99,
-            "id": 2
-        },
-        {
-            "img": "https://img-a.udemycdn.com/course/240x135/1239574_6e76.jpg",
-            "title": "Photorealistic Digital Painting From Beginner to Advanced",
-            "desc": "The Ultimate Graphic Design Course Which Covers Photoshop, Illustrator, InDesign,Design Theory, Branding and Logo Design",
-            "author": "Austin Batchelor",
-            "rating": "4.6",
-            "reviewsCount": "10,327",
-            "price": 109.99,
-            "discount": 9.99,
-            "id": 3
-        },
-        {
-            "img": "https://img-a.udemycdn.com/course/240x135/1514258_3768_2.jpg",
-            "title": "Adobe Illustrator CC - Essentials Training Course",
-            "author": "Video School Online Inc, Phil Ebiner, Daniel Walter Scott, Instructor HQ",
-            "desc": "The Ultimate Graphic Design Course Which Covers Photoshop, Illustrator, InDesign,Design Theory, Branding and Logo Design",
-            "rating": "4.7",
-            "reviewsCount": "10,327",
-            "price": 199.99,
-            "discount": 11.99,
-            "id": 4
-        },
-        {
-            "img": "https://img-a.udemycdn.com/course/240x135/1643044_e281.jpg",
-            "title": "Graphic Design Masterclass - Learn GREAT Design",
-            "desc": "The Ultimate Graphic Design Course Which Covers Photoshop, Illustrator, InDesign,Design Theory, Branding and Logo Design",
-            "author": "Lindsay Marsh",
-            "rating": "4.6",
-            "reviewsCount": "10,327",
-            "price": 194.99,
-            "discount": 9.99,
-            "id": 5
-        }
-    ]
+  "design": [
+    {
+      "img": "https://img-a.udemycdn.com/course/240x135/1259404_72d4_7.jpg",
+      "title": "The Ultimate Drawing Course - Beginner to Advanced",
+      "desc": "The Ultimate Graphic Design Course Which Covers Photoshop, Illustrator, InDesign,Design Theory, Branding and Logo Design",
+      "author": "Jaysen Batchelor, Quinton Batchelor",
+      "rating": "4.5",
+      "reviewsCount": "10,327",
+      "price": 149.99,
+      "discount": 9.99,
+      "id": 1
+    },
+    {
+      "img": "https://img-a.udemycdn.com/course/240x135/1136678_f12f_2.jpg",
+      "title": "How to Work with a Interior Design Styles Like a pro",
+      "desc": "The Ultimate Graphic Design Course Which Covers Photoshop, Illustrator, InDesign,Design Theory, Branding and Logo Design",
+      "author": "Errika Fogleman",
+      "rating": "4.3",
+      "reviewsCount": "10,327",
+      "price": 199.99,
+      "discount": 9.99,
+      "id": 2
+    },
+    {
+      "img": "https://img-a.udemycdn.com/course/240x135/1239574_6e76.jpg",
+      "title": "Photorealistic Digital Painting From Beginner to Advanced",
+      "desc": "The Ultimate Graphic Design Course Which Covers Photoshop, Illustrator, InDesign,Design Theory, Branding and Logo Design",
+      "author": "Austin Batchelor",
+      "rating": "4.6",
+      "reviewsCount": "10,327",
+      "price": 109.99,
+      "discount": 9.99,
+      "id": 3
+    },
+    {
+      "img": "https://img-a.udemycdn.com/course/240x135/1514258_3768_2.jpg",
+      "title": "Adobe Illustrator CC - Essentials Training Course",
+      "author": "Video School Online Inc, Phil Ebiner, Daniel Walter Scott, Instructor HQ",
+      "desc": "The Ultimate Graphic Design Course Which Covers Photoshop, Illustrator, InDesign,Design Theory, Branding and Logo Design",
+      "rating": "4.7",
+      "reviewsCount": "10,327",
+      "price": 199.99,
+      "discount": 11.99,
+      "id": 4
+    },
+    {
+      "img": "https://img-a.udemycdn.com/course/240x135/1643044_e281.jpg",
+      "title": "Graphic Design Masterclass - Learn GREAT Design",
+      "desc": "The Ultimate Graphic Design Course Which Covers Photoshop, Illustrator, InDesign,Design Theory, Branding and Logo Design",
+      "author": "Lindsay Marsh",
+      "rating": "4.6",
+      "reviewsCount": "10,327",
+      "price": 194.99,
+      "discount": 9.99,
+      "id": 5
+    }
+  ]
 }

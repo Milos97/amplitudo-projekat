@@ -19,11 +19,10 @@ class App extends React.Component {
     this.state = {
       
     };
+
   }
 
   
- 
-
   render() {
     
     return (
@@ -48,12 +47,15 @@ class App extends React.Component {
   }
 }
 
-window.globalVar = window.location.pathname.slice(-1); // dava id preko url-a 
+
+// window.globalVar = window.location.pathname.slice(-1);
 
 function Child() {
   
   let { courseid } = useParams();
-  window.globalVar = courseid;
+  var globalVar = courseid;
+  localStorage.setItem("globalVar", globalVar);
+
   return (
       <SingleCourse></SingleCourse>
   );  

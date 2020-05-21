@@ -21,13 +21,10 @@ class Footer extends React.Component {
                                 <a className="links-a" href="#"><strong>Teach on YouLearn</strong></a>
                             </li>
                             <li>
-                                <a className="links-a" href="#">YouLearn app</a>
+                                <a className="links-a" href="/about">About us</a>
                             </li>
                             <li>
-                                <a className="links-a" href="about">About us</a>
-                            </li>
-                            <li>
-                                <a className="links-a" href="faq">Faq</a>
+                                <a className="links-a" href="/faq">Faq</a>
                             </li>
                             <li>
                                 <a className="links-a" href="#">Blog</a>
@@ -36,13 +33,7 @@ class Footer extends React.Component {
                                 <a className="links-a" href="#">Help and Support</a>
                             </li>
                             <li>
-                                <a className="links-a" href="#">Affiliate</a>
-                            </li>
-                            <li>
-                                <a className="links-a" href="#">Sitemap</a>
-                            </li>
-                            <li>
-                                <a className="links-a" href="#">Featured courses</a>
+                                <a className="links-a" href="/courses">Featured courses</a>
                             </li>
                         </ul>
                         {/* <div className="col-sm-3">
@@ -68,7 +59,7 @@ class Footer extends React.Component {
                 <div className="footer-bottom">
                     <div className="row">
                         <div className="col-sm-6">
-                            <a style={{marginRight: "20px"}} href="#">
+                            <a style={{marginRight: "20px"}} href="/">
                                 <img className="header-logo" src={logo} alt="YouLearn" width="110" height="32"/>
                             </a>
                             <span className="footer-copyright">Copyright © 2020 YouLearn, Inc. </span>

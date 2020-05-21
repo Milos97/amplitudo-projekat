@@ -35,7 +35,7 @@ const CoursePage = ({course}) => {
                             <p className="course-sidebar-price"><span style={{fontSize: "36px", fontWeight: "700"}}>${discount}</span> 
                             <span className="span-price">${price}</span> <span className="span-discount">{discountPercentage}% off</span> </p>
                             <p className="course-sidebar-time"><b>8 hours</b> left at this price!</p>
-                            <button className="button blue-btn" style={{width: "100%"}} onClick={console.log("clicked")}>Buy now</button>
+                            <button className="button blue-btn" style={{width: "100%"}}>Buy now</button>
                             <p className="money-back">30-Day Money-Back Guarantee</p>
                             <p className="course-includes-p"><span>This course includes: </span> <br/>
                                 19.5 hours on-demand video <br/>
