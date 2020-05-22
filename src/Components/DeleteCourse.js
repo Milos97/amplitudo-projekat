@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
@@ -11,6 +11,9 @@ import Typography from "@material-ui/core/Typography";
 import UseField from "../hooks/useField";
 import { fetchCourses, makeCourse } from "../Actions/coursesAction";
 import { connect } from "react-redux";
+import axios from 'axios';
+
+axios.defaults.baseURL = "http://localhost:3000";
 
 const styles = (theme) => ({
   root: {
@@ -52,7 +55,7 @@ const DialogContent = withStyles((theme) => ({
   },
 }))(MuiDialogContent);
 
-const AddCourse = ( props ) => {
+const DeleteCourse = ( ) => {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -62,29 +65,11 @@ const AddCourse = ( props ) => {
     setOpen(false);
   };
 
-  const [title, changeTitle] = UseField("");
-  const [img, changeImg] = UseField("");
-  const [desc, changeDesc] = UseField("");
-  const [author, changeAuthor] = UseField("");
-  const [rating, changeRating] = UseField("");
-  const [reviewsCount, changeReviewsCount] = UseField("");
-  const [price, changePrice] = UseField("");
-  const [discount, changeDiscount] = UseField("");
+  const [input, setInput] = useState("");
 
-  const onSubmitHandler = () => {
-    const payload = {
-      img: img,
-      title: title,
-      desc: desc,
-      author: author,
-      rating: rating,
-      reviewsCount: reviewsCount,
-      price: price,
-      discount: discount,
-    };
-    props.makeCourse(payload);
-    props.close();
-  };
+  function deleteCourse() {
+    axios.delete(`/design/` + input, { params: {input: input} });
+  }
 
   return (
     <div>
@@ -107,10 +92,11 @@ const AddCourse = ( props ) => {
             lineHeight: "42px",
             letterSpacing: "2px",
             transition: "all .3s ease",
-            borderRadius: "0"
+            borderRadius: "0",
+            backgroundColor: "red"
         }}
       >
-        ADD NEW COURSE
+        DELETE COURSE
       </Button>
       <Dialog
         onClose={handleClose}
@@ -118,35 +104,21 @@ const AddCourse = ( props ) => {
         open={open}
       >
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-          <p style={{ marginLeft: "8px" }}>Add your new Course</p>
+          <p style={{ marginLeft: "8px" }}>Delete existing Course</p>
         </DialogTitle>
         <DialogContent dividers>
           <Typography gutterBottom>
             <div className="add-course-div">
-              <label for="title">Title: </label>
-              <input className="add-course-input" type="text" name="title" onChange={changeTitle}/>
-              <label for="img">Image link: </label>
-              <input className="add-course-input" type="text" name="img" onChange={changeImg} />
-              <label for="desc">Description: </label>
-              <input className="add-course-input" type="text" name="desc" onChange={changeDesc} />
-              <label for="author">Author: </label>
-              <input className="add-course-input" type="text" name="author" onChange={changeAuthor} />
-              <label for="rating">Rating: </label>
-              <input className="add-course-input" type="text" name="rating" onChange={changeRating} />
-              <label for="reviewsCount">Reviews Count: </label>
-              <input className="add-course-input" type="text" name="reviewsCount" onChange={changeReviewsCount} />
-              <label for="price">Price: </label>
-              <input className="add-course-input" type="number" name="price" onChange={changePrice} />
-              <label for="discount">Discount: </label>
-              <input className="add-course-input" type="number" name="discount" onChange={changeDiscount} />
+              <label for="course_id">Write id of course you want to delete: </label>
+              <input className="add-course-input" value={input} type="text" name="course_id" onInput={e => setInput(e.target.value)} />
               <div style={{ marginTop: "30px" }} className="input-parent-div">
                 <input
                   className="input-parent-a"
                   type="submit"
                   name="submit"
-                  value="Add New Course"
+                  value="Delete Course"
                   className="new-btn new-btn-primary"
-                  onClick={() => { onSubmitHandler(); handleClose();}}
+                  onClick={() => { deleteCourse(); handleClose();}}
                 />
               </div>
             </div>
@@ -157,4 +129,4 @@ const AddCourse = ( props ) => {
   );
 };
 
-export default connect(null, { makeCourse })(AddCourse);
+export default connect(null, { makeCourse })(DeleteCourse);

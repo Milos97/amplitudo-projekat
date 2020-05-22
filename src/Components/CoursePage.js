@@ -18,13 +18,17 @@ const CoursePage = ({course}) => {
                 <div className="course-page-content">
                     <h3 className="course-page-title">{title} </h3>
                     <p className="course-page-desc">{desc} </p>
-                    <p className="course-page-rating">Rating: {rating} {reviewsCount} </p>
+                    <p className="course-page-rating">Rating: {rating} ({reviewsCount}) </p>
                     <p className="course-page-author">Created by {author} </p>
 
                     
                     {
                         currentUser
-                        ? <a style={{marginTop: "30px"}} className="button blue-btn" href="https://we.tl/t-Yr2AAdeuQv" target="_blank">Download Course</a>
+                        ? 
+                        <div> 
+                            <a style={{marginTop: "30px"}} className="button blue-btn" href="https://we.tl/t-Yr2AAdeuQv" target="_blank">Download Course</a>
+                            <a style={{marginTop: "30px", display:"block"}} className="button blue-btn" href="#">Watch online</a>
+                        </div>
                         : ""
                     }
                 </div>

@@ -5,11 +5,8 @@ export const FETCH_COURSES = 'FETCH_COURSES';
 export const MAKE_COURSE = 'MAKE_COURSE';
 export const FETCH_COURSE = 'FETCH_COURSE';
 
-// let id = "id=1";
-let id = ""; 
-
 export const fetchCourses = () => dispatch => {
-    axios.get(`/design?${id}`) 
+    axios.get(`/design`) 
         .then(res => {
             dispatch({
             type: FETCH_COURSES,
@@ -37,3 +34,7 @@ export const makeCourse = (payload) => dispatch => {
             })
         })
 };
+
+// export const deleteCourse = () => dispatch => {
+//     axios.delete('/design', { data: { foo: "bar" }, headers: { "Authorization": "***" } });
+// };
