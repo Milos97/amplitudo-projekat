@@ -7,8 +7,6 @@ import MuiDialogContent from "@material-ui/core/DialogContent";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import Typography from "@material-ui/core/Typography";
-
-import UseField from "../hooks/useField";
 import { fetchCourses, makeCourse } from "../Actions/coursesAction";
 import { connect } from "react-redux";
 import axios from 'axios';

@@ -87,7 +87,7 @@ const LogIn = ({ history }) => {
   const { currentUser } = useContext(AuthContext);
 
   if (currentUser) {
-    return <Redirect to={window.location.pathname} />;
+    return <Redirect to={window.location.href} />;
   }
 
   return (
