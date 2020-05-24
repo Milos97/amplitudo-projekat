@@ -4,6 +4,7 @@ axios.defaults.baseURL = "http://localhost:3000";
 export const FETCH_COURSES = 'FETCH_COURSES';
 export const MAKE_COURSE = 'MAKE_COURSE';
 export const FETCH_COURSE = 'FETCH_COURSE';
+export const FILTERED_COURSES= 'FILTERED_COURSES';
 
 export const fetchCourses = () => dispatch => {
     axios.get(`/design`) 
@@ -20,6 +21,16 @@ export const fetchCourse = () => dispatch => {
         .then(res => {
             dispatch({
             type: FETCH_COURSE,
+            payload: res.data
+            })
+        });
+};
+
+export const filteredCourses = () => dispatch => {
+    axios.get(`/design?q=${encodeURI(localStorage.getItem("searchValue"))}`)
+        .then(res => {
+            dispatch({
+            type: FILTERED_COURSES,
             payload: res.data
             })
         });

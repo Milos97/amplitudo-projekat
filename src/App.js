@@ -6,6 +6,7 @@ import Home from "Page/Home/Home";
 import Faq from "Page/Faq/Faq";
 import About from "Page/About/About";
 import Courses from "Page/Courses/Courses";
+import FilteredCourses from "Page/Courses/FilteredCourses";
 import Admin from "Page/Admin/Admin";
 import SingleCourse from "./Components/SingleCourse";
 import LogIn from "./Components/LogIn";
@@ -35,7 +36,9 @@ class App extends React.Component {
                   <Route path="/faq" exact component={Faq} />
                   <Route path="/about" exact component={About} />
                   <Route path="/courses" exact component={Courses} />
+                  <Route path="/filtered-courses" exact component={FilteredCourses} />
                   <Route path="/courses/:courseid" children={<Child/>} />
+                  {/* <Route path="/filtered-courses/:courseid" children={<Child/>} /> */}
                   <Route path="/admin" exact component={Admin} />
             </Switch>
             <Footer></Footer>

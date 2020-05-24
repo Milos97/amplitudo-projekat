@@ -21,18 +21,15 @@ const Admin = (props) => {
     var name, email, uid;
 
     if (user != null) {
-        name = user.displayName;
-        email = user.email;
+        // name = user.displayName;
+        // email = user.email; 
         uid = user.uid;
     }
-    
-    console.log(email);
-      
     
     return ( 
         <div>
         {
-            email === "milos@gmail.com"
+            uid === "kArcfIx4yZVuwdCPrnpPrDabCg62"
             ? 
             <div className="admin-div">
                 <div className="admin-container">
