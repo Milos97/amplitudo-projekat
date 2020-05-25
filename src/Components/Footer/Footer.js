@@ -15,10 +15,10 @@ class Footer extends React.Component {
                     <div className="footer-row">
                         <ul className="links-list col-sm-9">
                             <li>
-                                <a className="links-a" href="#"><strong>YouLearn for Business</strong></a>
+                                <a className="links-a" href="/"><strong>YouLearn</strong></a>
                             </li>
                             <li>
-                                <a className="links-a" href="#"><strong>Teach on YouLearn</strong></a>
+                                <a className="links-a" href="mailto:business@youlearn.com"><strong>Teach on YouLearn</strong></a>
                             </li>
                             <li>
                                 <a className="links-a" href="/about">About us</a>
@@ -44,7 +44,7 @@ class Footer extends React.Component {
                 <hr/>
                 <div className="footer-row f-row-2">
                     <div className="f-col-1">
-                        <p>Top companies choose <a className="a-blue-dark" href="#">YouLearn for Business</a> to build in-demand career skills.</p>
+                        <p>Top companies choose <a className="a-blue-dark" href="/">YouLearn</a> to build in-demand career skills.</p>
                     </div>
                     <div className="f-col-2">
                         <img alt="Lyft" height="24" width="34" src="https://i.udemycdn.com/partner-logos/lyft-logo.svg" />

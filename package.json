@@ -30,6 +30,8 @@
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
     "react-slick": "^0.25.2",
+    "react-stripe-checkout": "^2.6.3",
+    "react-toastify": "^6.0.5",
     "reactstrap": "^8.4.1",
     "slick-carousel": "^1.8.1",
     "sweetalert-react": "^0.4.11",

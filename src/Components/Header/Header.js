@@ -41,6 +41,7 @@ const Header = ({props}) => {
                 </a>
                 
                 <input placeholder="Search for anything" name="q" autoComplete="off" 
+                value={localStorage.getItem("searchValue")}
                 onChange={() => { handleChange(); setCourseFilter(event.target.value);}} 
                 className="header-search-bar" />
             </div>
