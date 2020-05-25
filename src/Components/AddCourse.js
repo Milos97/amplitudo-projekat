@@ -70,6 +70,7 @@ const AddCourse = ( props ) => {
   const [reviewsCount, changeReviewsCount] = UseField("");
   const [price, changePrice] = UseField("");
   const [discount, changeDiscount] = UseField("");
+  const [iframeSrc, changeIframeSrc] = UseField("");
 
   const onSubmitHandler = () => {
     const payload = {
@@ -81,6 +82,7 @@ const AddCourse = ( props ) => {
       reviewsCount: reviewsCount,
       price: price,
       discount: discount,
+      iframeSrc: iframeSrc,
     };
     props.makeCourse(payload);
     props.close();
@@ -139,6 +141,8 @@ const AddCourse = ( props ) => {
               <input className="add-course-input" type="number" name="price" onChange={changePrice} />
               <label for="discount">Discount: </label>
               <input className="add-course-input" type="number" name="discount" onChange={changeDiscount} />
+              <label for="iframeSrc">iframeSrc: </label>
+              <input className="add-course-input" type="text" name="iframeSrc" onChange={changeIframeSrc} />
               <div style={{ marginTop: "30px" }} className="input-parent-div">
                 <input
                   className="input-parent-a"

@@ -36,9 +36,9 @@ class App extends React.Component {
                   <Route path="/faq" exact component={Faq} />
                   <Route path="/about" exact component={About} />
                   <Route path="/courses" exact component={Courses} />
-                  <Route path="/filtered-courses" exact component={FilteredCourses} />
                   <Route path="/courses/:courseid" children={<Child/>} />
-                  {/* <Route path="/filtered-courses/:courseid" children={<Child/>} /> */}
+                  <Route path="/filtered-courses" exact component={FilteredCourses} />
+                  <Route path="/filtered-courses/:courseid" children={<Child/>} />
                   <Route path="/admin" exact component={Admin} />
             </Switch>
             <Footer></Footer>
@@ -62,10 +62,6 @@ function Child() {
   return (
       <SingleCourse></SingleCourse>
   );  
-}
-
-function loggedIn() {
-  console.log(test);
 }
 
 export default App;

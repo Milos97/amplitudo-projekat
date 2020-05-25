@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import CourseItem from './Course';
 import CoursePage from './CoursePage';
 import {fetchCourses, makeCourse, fetchCourse} from "Actions/coursesAction";
 import {connect} from "react-redux";

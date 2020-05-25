@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { withRouter, Redirect } from "react-router";
 import app from '../base';
 import { AuthContext } from "../Auth.js";
+import CourseStream from './CourseStream';
 
 const CoursePage = ({course}) => {
     const {title, img, author, rating, reviewsCount, price, discount, id, desc} = course;
@@ -26,8 +27,9 @@ const CoursePage = ({course}) => {
                         currentUser
                         ? 
                         <div> 
-                            <a style={{marginTop: "30px"}} className="button blue-btn" href="https://we.tl/t-Yr2AAdeuQv" target="_blank">Download Course</a>
-                            <a style={{marginTop: "30px", display:"block"}} className="button blue-btn" href="#">Watch online</a>
+                            <CourseStream course={course} key={course.id}></CourseStream>
+                            {/* <a style={{marginTop: "30px", display:"block"}} className="button blue-btn" href="#">Watch online</a> */}
+                            <a style={{marginTop: "30px", backgroundColor: "#d63031"}} className="button blue-btn red-btn" href="https://we.tl/t-Yr2AAdeuQv" target="_blank">Download Course</a>
                         </div>
                         : ""
                     }

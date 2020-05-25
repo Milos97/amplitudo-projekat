@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
@@ -7,15 +7,17 @@ import MuiDialogContent from "@material-ui/core/DialogContent";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import Typography from "@material-ui/core/Typography";
-import { fetchCourses, makeCourse } from "../Actions/coursesAction";
+import { fetchCourses, makeCourse, fetchCourse } from "../Actions/coursesAction";
 import { connect } from "react-redux";
-import axios from 'axios';
+import axios from "axios";
 
 axios.defaults.baseURL = "http://localhost:3000";
 
 const styles = (theme) => ({
   root: {
     margin: 0,
+    width: "100%",
+    maxWidth: "840px",
     padding: theme.spacing(2),
   },
   closeButton: {
@@ -47,13 +49,15 @@ const DialogTitle = withStyles(styles)((props) => {
 const DialogContent = withStyles((theme) => ({
   root: {
     padding: theme.spacing(2),
-    width: "380px",
+    width: "100%",
+    maxWidth: "840px",
     borderBottom: "none",
     paddingTop: "30px",
   },
 }))(MuiDialogContent);
 
-const DeleteCourse = ( ) => {
+const CourseStream = ({course}) => {
+
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -65,9 +69,7 @@ const DeleteCourse = ( ) => {
 
   const [input, setInput] = useState("");
 
-  function deleteCourse() {
-    axios.delete(`/design/` + input, { params: {input: input} });
-  }
+  const {title, img, author, rating, reviewsCount, price, discount, id, desc, iframeSrc} = course;
 
   return (
     <div>
@@ -77,24 +79,23 @@ const DeleteCourse = ( ) => {
         color="primary"
         onClick={handleClickOpen}
         style={{
-            margin: "20px",
-            width: "220px",
-            color: "#fff",
-            backgroundColor: "#02b3e4",
-            border: "2px solid transparent",
-            boxShadow: "8px 10px 20px 0 rgba(46, 61, 73, 0.15)",
-            display: "inline-block",
-            height: "48px",
-            padding: "0 8px",
-            fontSize: "13px",
-            lineHeight: "42px",
-            letterSpacing: "2px",
-            transition: "all .3s ease",
-            borderRadius: "0",
-            backgroundColor: "#d63031"
+          marginTop: "20px",
+          width: "220px",
+          color: "#fff",
+          backgroundColor: "#02b3e4",
+          border: "2px solid transparent",
+          boxShadow: "8px 10px 20px 0 rgba(46, 61, 73, 0.15)",
+          display: "inline-block",
+          height: "48px",
+          padding: "0 8px",
+          fontSize: "13px",
+          lineHeight: "42px",
+          letterSpacing: "2px",
+          transition: "all .3s ease",
+          borderRadius: "0"
         }}
       >
-        DELETE COURSE
+        WATCH ONLINE
       </Button>
       <Dialog
         onClose={handleClose}
@@ -102,23 +103,12 @@ const DeleteCourse = ( ) => {
         open={open}
       >
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-          <p style={{ marginLeft: "8px" }}>Delete existing Course</p>
+            <p style={{ marginLeft: "8px" }}>Course content: {title}</p>
         </DialogTitle>
         <DialogContent dividers>
           <Typography gutterBottom>
-            <div className="add-course-div">
-              <label for="course_id">Write id of course you want to delete: </label>
-              <input className="add-course-input" value={input} type="text" name="course_id" onInput={e => setInput(e.target.value)} />
-              <div style={{ marginTop: "30px" }} className="input-parent-div">
-                <input
-                  className="input-parent-a"
-                  type="submit"
-                  name="submit"
-                  value="Delete Course"
-                  className="new-btn new-btn-primary"
-                  onClick={() => { deleteCourse(); handleClose();}}
-                />
-              </div>
+            <div className="course-stream-div">
+            <iframe width="800" height="400" src={course.iframeSrc} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
           </Typography>
         </DialogContent>
@@ -127,4 +117,4 @@ const DeleteCourse = ( ) => {
   );
 };
 
-export default connect(null, { makeCourse })(DeleteCourse);
+export default CourseStream;
