@@ -9,8 +9,6 @@ import Courses from "Page/Courses/Courses";
 import FilteredCourses from "Page/Courses/FilteredCourses";
 import Admin from "Page/Admin/Admin";
 import SingleCourse from "./Components/SingleCourse";
-import LogIn from "./Components/LogIn";
-import SignUp from "./Components/SignUp";
 import { AuthProvider } from "./Auth";
 
 

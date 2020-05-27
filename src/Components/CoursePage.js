@@ -79,13 +79,20 @@ const CoursePage = ({course}) => {
                             <p className="course-sidebar-price"><span style={{fontSize: "36px", fontWeight: "700"}}>${discount}</span> 
                             <span className="span-price">${price}</span> <span className="span-discount">{discountPercentage}% off</span> </p>
                             <p className="course-sidebar-time"><b>8 hours</b> left at this price!</p>
+                            <div>
                             <StripeCheckout 
                                 stripeKey="pk_test_vgv630Mi08ZKLuVSTzPgH2bw00BWj0JhZW"
                                 token={handleToken}
                                 amount={discount * 100}
-                                
                                 name={title}
+                                disabled={!currentUser}
                             />
+                            {
+                                !currentUser
+                                ? <span style={{marginLeft: "8px", fontSize: "12px"}}>Please, Log In First!</span>
+                                : ""
+                            }
+                            </div>
                             {/* <button className="button blue-btn" style={{width: "100%"}}>Buy now</button> */}
                             <p className="money-back">30-Day Money-Back Guarantee</p>
                             <p className="course-includes-p"><span>This course includes: </span> <br/>

@@ -33,7 +33,7 @@ const Header = ({props}) => {
                 <a href="/">
                     <img className="header-logo" style={{marginBottom: "-8px"}} src={logo} alt="YouLearn" width="110" height="32"/>
                 </a>
-                <a style={{color: "#3c3b37"}} href="courses">Courses</a>
+                <a style={{color: "#3c3b37"}} href="/courses">Courses</a>
             </div>
             <div className="search-div header-div">
                 <a href="/filtered-courses">
@@ -52,7 +52,7 @@ const Header = ({props}) => {
                 <SignUp></SignUp>
                 {
                     currentUser
-                    ? <button className="log-out" onClick={() => app.auth().signOut()}>Log Out</button>
+                    ? <button className="log-out" onClick={() => { app.auth().signOut(); localStorage.setItem("displayCourse", "");}}>Log Out</button>
                     : ""
                 }
             </div>

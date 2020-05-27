@@ -100,7 +100,7 @@ class Home extends React.Component {
               <h2 className="h2-style">Become an instructor</h2>
               <p className="p-style">Top instructors from around the world teach millions of students on YouLearn. 
               We provide the tools and skills to teach what you love.</p>
-              <a href="#" className="btn-m btn-primary-m btn-large-m">Start teaching today</a>
+              <a href="mailto:business@youlearn.com" className="btn-m btn-primary-m btn-large-m">Start teaching today</a>
             </div>
           </div>
         </div>

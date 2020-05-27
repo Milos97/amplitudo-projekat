@@ -66,8 +66,10 @@ const AddCourse = ( props ) => {
   const [img, changeImg] = UseField("");
   const [desc, changeDesc] = UseField("");
   const [author, changeAuthor] = UseField("");
-  const [rating, changeRating] = UseField("");
-  const [reviewsCount, changeReviewsCount] = UseField("");
+  // const [rating, changeRating] = UseField("");
+  // const [reviewsCount, changeReviewsCount] = UseField("");
+  const rating = "4.3";
+  const reviewsCount = "10,321";
   const [price, changePrice] = UseField("");
   const [discount, changeDiscount] = UseField("");
   const [iframeSrc, changeIframeSrc] = UseField("");
@@ -85,7 +87,6 @@ const AddCourse = ( props ) => {
       iframeSrc: iframeSrc,
     };
     props.makeCourse(payload);
-    props.close();
   };
 
   return (
@@ -133,10 +134,10 @@ const AddCourse = ( props ) => {
               <input className="add-course-input" type="text" name="desc" onChange={changeDesc} />
               <label for="author">Author: </label>
               <input className="add-course-input" type="text" name="author" onChange={changeAuthor} />
-              <label for="rating">Rating: </label>
+              {/* <label for="rating">Rating: </label>
               <input className="add-course-input" type="text" name="rating" onChange={changeRating} />
               <label for="reviewsCount">Reviews Count: </label>
-              <input className="add-course-input" type="text" name="reviewsCount" onChange={changeReviewsCount} />
+              <input className="add-course-input" type="text" name="reviewsCount" onChange={changeReviewsCount} /> */}
               <label for="price">Price: </label>
               <input className="add-course-input" type="number" name="price" onChange={changePrice} />
               <label for="discount">Discount: </label>
